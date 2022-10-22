@@ -30,11 +30,11 @@ jobs:
       matrix:
         # Compile on Linux & Windows.
         os: 
-          - ubuntu-18.04
+          - ubuntu-20.04
           - windows-latest
 
         include:
-          - os: ubuntu-18.04
+          - os: ubuntu-20.04
             os_short: linux
           - os: windows-latest
             os_short: win
@@ -82,14 +82,14 @@ jobs:
 
       # Checkout repos
       - name: Checkout hl2sdk-csgo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: Wend4r/hl2sdk
           ref: csgo
           path: hl2sdk-csgo
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
           path: project
